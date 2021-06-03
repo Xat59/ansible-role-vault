@@ -1,0 +1,16 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: get vault binary
+      shell: '[ -x "$(command -v vault)" ] && echo "True" || echo "False"'
+      register: vault_is_installed_command
+      changed_when: false
+
+    - name: Service is enabled and running
+      assert:
+        that:
+          - vault_is_installed_command.stdout == "True"

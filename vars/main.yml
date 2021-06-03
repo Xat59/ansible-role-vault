@@ -1,0 +1,2 @@
+---
+vault_download_url: "https://releases.hashicorp.com/vault/{{ vault_version }}/vault_{{ vault_version }}_linux_amd64.zip"

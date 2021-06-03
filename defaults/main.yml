@@ -1,0 +1,3 @@
+---
+# vault version to install
+vault_version: "1.7.2"
